@@ -3955,7 +3955,8 @@ input[type="submit"].btn.btn-mini {
   padding: 8px 15px;
   margin: 0 0 20px;
   list-style: none;
-  background-color: #f5f5f5;
+  background:transparent;
+  /*background-color: #ffffff;*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3966,7 +3967,10 @@ input[type="submit"].btn.btn-mini {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  text-shadow: 0 1px 0 #ffffff;
+  /*text-shadow: 0 1px 0 #ffffff;*/
+}
+.breadcrumb li+li:before {
+  content:'»';
 }
 .breadcrumb .divider {
   padding: 0 5px;

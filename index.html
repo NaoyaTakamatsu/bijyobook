@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/kwicks-slider.css" type="text/css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/superfish.js"></script>
@@ -21,6 +22,7 @@
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/jquery.cookie.js"></script>    
 	<script type="text/javascript" src="js/touchTouch.jquery.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
 
 	<script>		
@@ -87,8 +89,68 @@
       <div class="container">
     <div class="row">
           <div class="span12"> 
+          <div class="autoplay">
+      <div><img src="img/ayakasama.jpg" alt="" > </div>
+     <div> <img src="img/ayakasama.jpg" alt="" ></div>
+     <div> <img src="img/ayakasama.jpg" alt="" ></div>
+     <div><img src="img/ayakasama.jpg" alt="" > </div>
+     <div><img src="img/ayakasama.jpg" alt="" > </div>
+     <div><img src="img/ayakasama.jpg" alt="" > </div>
+    </div>
+    
+    <script>
+    
+      $(document).ready(function(){
+      $('.single-item').slick();
+      $('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+        $('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+$('.fade').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  slide: '> div',
+  cssEase: 'linear'
+});
+      });
+    </script>
+    
         <!--============================== slider =================================-->
-        <div class="flexslider">
+        <!--<div class="flexslider">
               <ul class="slides">
             <li> <img src="img/OL1.jpg" alt="" > </li>
             <li> <img src="img/mati1.jpg" alt="" > </li>
@@ -97,19 +159,78 @@
             <li> <img src="img/yakei.jpg" alt="" > </li>
           </ul>
             </div>
-        <span id="responsiveFlag"></span>
+        <span id="responsiveFlag"></span>-->
         <div class="block-slogan">
               <h2>ABOUT</h2>
               <div>
-            <h5>美女Bookは、美人なOLさん達が人生を変えた一冊を紹介してくれるメディアです。 </h5>
+            <h5>美女Bookは、美人なOLさん達がおすすめの一冊を紹介してくれるメディアです。</h5>
           </div>
             </div>
+                    </div>
+                    <article class="span5">
+              <h3>New</h3>
+              <ul class="list-photo">
+            <li><a href="index_ayaka.html"><img src="img/ayakasama1.jpg " alt="" /></a><p>松尾彩加</p></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img7.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img8.jpg " alt="" /></a></li>
+            <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img9.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img10.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img11.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img12.jpg " alt="" /></a></li>
+            <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img13.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img14.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img15.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img16.jpg " alt="" /></a></li>
+            <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img17.jpg " alt="" /></a></li>
+          </ul>
+            </article>
+            <article class="span5">
+              <h3>Rank</h3>
+              <ul class="list-photo">
+            <li><a href="index_ayaka.html"><img src="img/ayakasama1.jpg " alt="" /></a><p>松尾彩加</p></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img7.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img8.jpg " alt="" /></a></li>
+            <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img9.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img10.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img11.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img12.jpg " alt="" /></a></li>
+            <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img13.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img14.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img15.jpg " alt="" /></a></li>
+            <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img16.jpg " alt="" /></a></li>
+            <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img17.jpg " alt="" /></a></li>
+          </ul>
+            </article>
+            
+                    <div class="span2">
+          <h3 class="extra">Search</h3>
+          <form id="search" action="search.php" method="GET" accept-charset="utf-8" >
+            <div class="clearfix">
+              <input type="text" name="s" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''" >
+              <a href="#" onClick="document.getElementById('search').submit()" class="btn btn-1">Search</a> </div>
+          </form>
+          <h3>Categories</h3>
+          <ul class="list extra extra1">           
+            <li><a href="#">リクルートホールディングス</a></li>
+            <li><a href="#">サイバーエージェント</a></li>
+            <li><a href="#">DeNA</a></li>
+            <li><a href="#">Yahoo!!</a></li>
+            <li><a href="#">Google</a></li>
+            <li><a href="#">リッチメディア</a></li>
+            <li><a href="#">電通</a></li>
+            <li><a href="#">博報堂</a></li> 
+            <li><a href="#">オプト</a></li>
+            <li><a href="#">セプテー二</a></li>                       
+      </ul>          
+        </div>
+
       </div>
+      
         </div>
   </div>
       
       <!--============================== content =================================-->
-      
+      <!--
       <div id="content" class="content-extra"><div class="ic"></div>
     <div class="row-1">
           <div class="container">
@@ -152,10 +273,10 @@
                       <a href="#" class="btn btn-1">Read More</a> </section>
               </div>
                 </li>-->
-                 <article class="span6">
+                 <!--<article class="span6">
               <h3>New</h3>
               <ul class="list-photo">
-            <li><a href="img/ayakasama3.jpg" class="magnifier" ><img src="img/ayakasama1.jpg " alt="" /></a></li>
+            <li><a href="index_ayaka.html"><img src="img/ayakasama1.jpg " alt="" /></a><p>松尾彩加</p></li>
             <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img7.jpg " alt="" /></a></li>
             <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img8.jpg " alt="" /></a></li>
             <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img9.jpg " alt="" /></a></li>
@@ -172,7 +293,7 @@
             <article class="span6">
               <h3>Rank</h3>
               <ul class="list-photo">
-            <li><a href="img/ayakasama3.jpg" class="magnifier" ><img src="img/ayakasama1.jpg " alt="" /></a></li>
+            <li><a href="index_ayaka.html"><img src="img/ayakasama1.jpg " alt="" /></a><p>松尾彩加</p></li>
             <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img7.jpg " alt="" /></a></li>
             <li><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img8.jpg " alt="" /></a></li>
             <li class="last"><a href="img/image-blank.png" class="magnifier" ><img src="img/page1-img9.jpg " alt="" /></a></li>
@@ -187,11 +308,11 @@
           </ul>
             </article>
 
-
-          </ul>
+-->
+          <!--</ul>
             </div>
       </div>
-        </div>
+        </div>-->
     <!--<div class="container">
           <div class="row">
         <!--<article class="span6">

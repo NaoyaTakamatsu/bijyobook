@@ -449,6 +449,15 @@ p {
   float: left;
   margin: 0 0 30px 30px;
 }
+.list-photo p {
+  position: absolute;
+  margin: 0;
+  color:white;
+  line-height: 1;
+  padding: 5px;
+  width: 170px;
+}
+
 /*----------- .portfolio --------------*/
 .portfolio {
   list-style: none outside;
@@ -1272,4 +1281,17 @@ footer {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.photodate{
+	position: absolute;
+	 top: 0px; 
+	 left: 55px ;
+	 color:white;
+	 font-size: 12px;
+}
+.photoname{
+	position: absolute; 
+	top: 60px; 
+	left: 0px ;
+	color:white;
 }
